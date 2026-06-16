@@ -204,8 +204,13 @@ h1 {
 
 .section-heading {
   align-self: start;
+  grid-column: 1;
   position: sticky;
   top: 5.25rem;
+}
+
+.section > :not(.section-heading) {
+  grid-column: 2;
 }
 
 .section h2 {
@@ -375,7 +380,12 @@ th:nth-child(5) {
   }
 
   .section-heading {
+    grid-column: auto;
     position: static;
+  }
+
+  .section > :not(.section-heading) {
+    grid-column: auto;
   }
 }
 
