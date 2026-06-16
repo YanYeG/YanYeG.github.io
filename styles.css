@@ -143,32 +143,34 @@ h1 {
   font-size: 0.93rem;
 }
 
-.cv-panel {
+.profile-panel {
   display: grid;
   gap: 1rem;
   align-self: center;
 }
 
-.cv-preview-link {
-  display: block;
+.portrait-frame {
   overflow: hidden;
+  margin: 0;
+  aspect-ratio: 4 / 5;
   border: 1px solid var(--rule);
   background: var(--white);
   box-shadow: var(--shadow);
-  text-decoration: none;
-  transform: rotate(1.1deg);
+  transform: rotate(0.8deg);
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.cv-preview-link:hover {
+.portrait-frame:hover {
   transform: rotate(0deg) translateY(-3px);
   box-shadow: 0 30px 88px rgba(24, 34, 31, 0.2);
 }
 
-.cv-preview-link img {
+.portrait-frame img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
 }
 
 .button-link {
@@ -371,7 +373,7 @@ th:nth-child(5) {
     font-size: clamp(4rem, 22vw, 7rem);
   }
 
-  .cv-panel {
+  .profile-panel {
     max-width: 360px;
   }
 
